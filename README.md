@@ -22,6 +22,12 @@ Activate the virtual environment:
 conda activate rps-env
 ```
 
+Install package dependencies within the virtual environment:
+
+```
+pip install -r requirements.txt
+```
+
 
 
 # Usage
