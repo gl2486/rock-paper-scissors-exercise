@@ -36,3 +36,26 @@ computer_action = random.choice(possible_actions)
 print('-' * 20)
 print(f"You chose: '{user_action.upper()}' \nThe computer chose: '{computer_action.upper()}'")
 print('-' * 20)
+
+
+# DETERMINE WINNER
+# Rock beats Scissors
+# Paper beats Rock
+# Scissors beats Paper
+# Rock vs Rock, Paper vs Paper, and Scissors vs Scissors each results in a "tie"
+
+win = {
+    'paper':'scissors', 
+    'rock':'paper', 
+    'scissors':'rock'
+}
+
+if user_action == win[computer_action]:
+    print("Great job, you win!")
+elif computer_action == win[user_action]:
+    print("Oh, the computer won. Better luck next time!")
+else:
+    print("It's a tie!")
+
+print('-' * 20)
+print("Thanks for playing. Please play again!\n")
