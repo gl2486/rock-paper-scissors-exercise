@@ -2,21 +2,37 @@
 
 # this is the "game.py" file...
 
-print("Rock, Paper, Scissors, Shoot!")
+print('-' * 20)
+print("ROCK, PAPER, SCISSORS, SHOOT!")
+print('-' * 20)
 
 
-# user action input 
+# user action input
+# list possible actions
+# "while" loops
 
-user_action = input("Please choose either 'rock', 'paper' or 'scissors': ")
+while True:
+
+    user_action = input("Please choose either 'ROCK', 'PAPER' or 'SCISSORS': ")
+    possible_actions = ["rock", "paper", "scissors"]
+
+    if user_action.casefold() not in possible_actions:
+        print("Oops, please try again!")
+        continue
+
+    else:
+        break
 
 
-# list of possible actions
+# import random
 # computer random selection..
 
 import random
-
-possible_actions = ["rock", "paper", "scissors"]
 computer_action = random.choice(possible_actions)
 
-print(f"\nYou chose: {user_action} \nComputer chose: {computer_action}\n")
 
+# print user input and computer selection
+
+print('-' * 20)
+print(f"You chose: '{user_action.upper()}' \nThe computer chose: '{computer_action.upper()}'")
+print('-' * 20)
