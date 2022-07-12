@@ -1,16 +1,20 @@
 
+
 # this is the "game.py" file...
 
 import os
 
 player_name = os.getenv("PLAYER_NAME", default="Player One")
 
-# ...
+# def param
 
-print('-' * 20)
-print(f"Welcome '{player_name}' to my Rock-Paper-Scissors game... \nROCK, PAPER, SCISSORS, SHOOT!")
-print('-' * 20)
+def divider_param(message):
+    print('-' * 20)
+    print(message)
+    print('-' * 20)
 
+
+divider_param(f"Welcome '{player_name}' to my Rock-Paper-Scissors game... \nROCK, PAPER, SCISSORS, SHOOT!")
 
 # user action input
 # list possible actions
@@ -38,9 +42,7 @@ computer_action = random.choice(possible_actions)
 
 # print user input and computer selection
 
-print('-' * 20)
-print(f"You chose: '{user_action.upper()}' \nThe computer chose: '{computer_action.upper()}'")
-print('-' * 20)
+divider_param(f"You chose: '{user_action.upper()}' \nThe computer chose: '{computer_action.upper()}'")
 
 
 # DETERMINE WINNER
@@ -62,5 +64,5 @@ elif computer_action == win[user_action]:
 else:
     print("It's a tie!")
 
-print('-' * 20)
-print("Thanks for playing. Please play again!\n")
+
+divider_param("Thanks for playing. Please play again!")
