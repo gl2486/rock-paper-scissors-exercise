@@ -1,9 +1,14 @@
 
-
 # this is the "game.py" file...
 
+import os
+
+player_name = os.getenv("PLAYER_NAME", default="Player One")
+
+# ...
+
 print('-' * 20)
-print("ROCK, PAPER, SCISSORS, SHOOT!")
+print(f"Welcome '{player_name}' to my Rock-Paper-Scissors game... \nROCK, PAPER, SCISSORS, SHOOT!")
 print('-' * 20)
 
 

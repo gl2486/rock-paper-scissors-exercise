@@ -31,9 +31,35 @@ pip install -r requirements.txt
 
 
 # Usage
+## Game Play
 
 Play a game
 
 ```
 python game.py
+```
+
+Select a PLAYER_NAME (e.g. 'Jon Snow') to play the game
+
+```
+PLAYER_NAME="Jon Snow" python game.py
+```
+
+
+# Demo
+
+Here is a demonstration of the gameplay:
+
+```
+--------------------
+ROCK, PAPER, SCISSORS, SHOOT!
+--------------------
+Please choose either 'ROCK', 'PAPER' or 'SCISSORS': scissors
+--------------------
+You chose: 'SCISSORS'
+The computer chose: 'ROCK'
+--------------------
+Oh, the computer won. Better luck next time!
+--------------------
+Thanks for playing. Please play again!
 ```
