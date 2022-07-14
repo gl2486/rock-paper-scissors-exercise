@@ -22,7 +22,24 @@ Activate the virtual environment:
 conda activate rps-env
 ```
 
+Install package dependencies within the virtual environment:
+
+```sh
+pip install -r requirements.txt
+```
+
+
+
 # Usage
+## Rules of the Game
+
+The application should compare the user's selection to the computer player's selection, and determine which is the winner. The following logic should govern that determination:
+
+- Rock beats Scissors
+- Paper beats Rock
+- Scissors beats Paper
+- Rock vs Rock, Paper vs Paper, and Scissors vs Scissors each results in a "tie"
+
 ## Game Play
 
 Play a game:
@@ -36,18 +53,18 @@ Option to play the game with PLAYER_NAME (e.g. 'Jon Snow') selection:
 ```sh
 PLAYER_NAME="Jon Snow" python game.py
 ```
-## Rules of the Game
 
-The application should compare the user's selection to the computer player's selection, and determine which is the winner. The following logic should govern that determination:
+## Testing
 
-- Rock beats Scissors
-- Paper beats Rock
-- Scissors beats Paper
-- Rock vs Rock, Paper vs Paper, and Scissors vs Scissors each results in a "tie"
+Run tests:
+
+```sh
+pytest
+```
 
 # Demo
 
-Here is a demonstration of the game play:
+Here is a demonstration of the gameplay:
 
 ```
 --------------------
