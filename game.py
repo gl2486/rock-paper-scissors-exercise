@@ -2,9 +2,13 @@
 
 # this is the "game.py" file...
 
+import random
 import os
 
+# Customize player name
+
 player_name = os.getenv("PLAYER_NAME", default="Player One")
+
 
 # def param
 
@@ -16,9 +20,11 @@ def divider_param(message):
 
 divider_param(f"Welcome '{player_name}' to my Rock-Paper-Scissors game... \nROCK, PAPER, SCISSORS, SHOOT!")
 
+
 # user action input
 # list possible actions
-# "while" loops
+# validate input, casefold
+# added loop
 
 while True:
 
@@ -33,17 +39,14 @@ while True:
         break
 
 
-# import random
 # computer random selection..
 
-import random
 computer_action = random.choice(possible_actions)
 
 
 # print user input and computer selection
 
 divider_param(f"You chose: '{user_action.upper()}' \nThe computer chose: '{computer_action.upper()}'")
-
 
 # DETERMINE WINNER
 # Rock beats Scissors
@@ -58,7 +61,7 @@ win = {
 }
 
 if user_action == win[computer_action]:
-    print("Great job, you win!")
+    print("Congrats! you win.")
 elif computer_action == win[user_action]:
     print("Oh, the computer won. Better luck next time!")
 else:
